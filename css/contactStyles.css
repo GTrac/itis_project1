@@ -138,8 +138,8 @@ header a:hover, a:active {
 
 /*Hero section*/
 .hero-container {
-    height: 30vh;
-    min-height: 350px;
+    height: 10vh;
+    min-height: 125px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));/*,url(../images/hero.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -178,124 +178,7 @@ header a:hover, a:active {
     padding: 1rem 0 1rem 0;
 }
 
-/*About section*/
-#about {
-    align-items: center;
-    gap:3rem;
-}
-
-#about_me {
-    max-width: 80%;
-}
-
-#about_me h2 {
-    align-self: flex-start;
-}
-
-#contact {
-    align-items: center;
-    gap:1.7rem;
-}
-
-#contact ul {
-    gap:0;
-}
-
-
-.card {
-    background-color: white;
-    align-items: center;
-    border-radius: 4px;
-}
-
-.card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.card p {
-    font-weight: 600;
-}
-
-.cards{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
-    justify-content: center;
-    gap: 1rem;
-}
-
-#thuy_card {
-    visibility: visible;
-}
-
-#thuy_title, #thuy_info {
-    visibility: collapse;
-}
-#thuy_card:hover #thuy_title{
-    visibility: visible;
-}
-
-#thuy_card:hover #thuy_info {
-    visibility: visible;
-    color: var(--black_color);
-    font-weight: 100;
-}
-
-#daisy_card {
-    visibility: visible;
-}
-
-#daisy_title, #daisy_info {
-    visibility: collapse;
-}
-#daisy_card:hover #daisy_title{
-    visibility: visible;
-}
-
-#daisy_card:hover #daisy_info {
-    visibility: visible;
-    color: var(--black_color);
-    font-weight: 100;
-}
-
-#leif_card {
-    visibility: visible;
-}
-
-#leif_title, #leif_info {
-    visibility: collapse;
-}
-#leif_card:hover #leif_title{
-    visibility: visible;
-}
-
-#leif_card:hover #leif_info {
-    visibility: visible;
-    color: var(--black_color);
-    font-weight: 100;
-}
-
-.address {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.2rem;
-}
-
-.second-column {
-    grid-column: 2;
-}
-
-.hours-container {
-    display: grid;
-    grid-template-columns: auto max-content;
-    gap: 1rem;
-    align-content: center;
-}
-
-/*Reservation section*/
+/*Contact Page*/
 input,
 textarea,
 select {
@@ -390,31 +273,22 @@ footer ul i {
         font-size: var(--fs-h3);
     }
     
-/*About for phones*/
-    #about {
-        align-items: center;
-        gap:3rem;
-    }
-    
-    #about_me_container {
-        flex-flow: column;
+/*hero for phones*/
+
+    .hero-container {
+        height: min-content;
+        min-height: min-content;
     }
 
-    #about_me {
-        max-width: 100%;
-        padding: 0 1rem;
-        text-align: center;
-    }
-    
-    #about_me h2 {
-        align-self: center;
+    .hero {
+       padding-bottom:.5rem;
     }
 
-    #contact ul p {
+    .hero ul p {
         visibility: collapse;
     }
 
-    #contact a{
+    .hero a{
         flex: initial auto auto;
         width: 20px;
         height: 20px;
@@ -422,16 +296,4 @@ footer ul i {
         align-items: center;
     }
     
-    #contact ul {
-       flex-flow: row;
-       gap:1rem;
-    }
-
-    .cards {
-        gap: 1.5rem;
-    }
-
-    #leif_info, #daisy_info, #thuy_info {
-        text-align: center;
-    }
 }

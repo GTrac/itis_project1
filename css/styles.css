@@ -1,6 +1,6 @@
 /*CSS Variables*/
 :root {
-     --white_color: #ffffff;
+    --white_color: #ffffff;
     --black_color: #040615;
     --link_highlight: #48badc;
     --link_color: #0b1a47;
@@ -20,8 +20,23 @@
     --fs-h5: 1.2rem;
     --fs-h6: 1rem;
     --fs-small: 0.83rem;
-  }
-  
+
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(100, 255, 218, 0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
+}
+
 /*Global Styles*/
 * {
     margin: 0;
@@ -45,26 +60,28 @@
 h1 {
     font-size: var(--fs-h1);
 }
-  
+
 h2 {
-    color: var(--navy);
+    color: var(--light-slate);
     font-weight: 600;
-    font-size:var(--fs-h2);
+    font-size: var(--fs-h2);
 }
 
 h3 {
     font-size: var(--fs-h3);
     font-weight: 400;
-    color: var(--secondary75);
+    color: var(--light-slate);
 }
 
 h4 {
     font-size: var(--fs-h4);
+    color: var(--light-slate);
 
 }
 
 .small {
     font-size: var(--fs-small);
+    color: var(--light-slate);
 }
 
 ul {
@@ -73,28 +90,36 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--dark_gray);
+    color: var(--green);
 }
 
 a:hover {
-    color: var(--link_highlight)
+    color: var(--green-tint);
 }
 
 a:active {
-    color: var(--link_color)
+    color: var(--green-tint)
+
 }
 
 body {
-    background-color: var(--white-color);
+    background-color: var(--navy);
     font-family: 'Raleway', sans-serif;
-    color: var(--black_color);
+    color: var(--slate);
+    margin:0;
+    padding:0;
 }
 
 
 /*Header*/
+header {
+
+    width:100%;
+}
 header img {
     height: 44px;
     width: auto;
+
 }
 
 #logo {
@@ -113,16 +138,17 @@ header img {
 #logo_split {
     position: relative;
     top: -5px;
-    padding-right:6px;
+    padding-right: 6px;
 }
 
 #header_logo {
     width: var(--fs-h1);
     height: var(--fs-h1);
+    border-radius: 50%;
 }
 
 header {
-    background-color: var(--white-color);
+    background-color: var(--navy);
     padding: 1rem;
     justify-content: space-between;
     align-items: center;
@@ -131,43 +157,50 @@ header {
 header a {
     font-size: var(--fs-h5);
 }
-
-header a:hover, a:active {
-    color: var(--link_highlight);
+main {
 }
-
 /*Hero section*/
 .hero-container {
-    height: 30vh;
+    height: auto;
     min-height: 350px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));/*,url(../images/hero.jpg);*/
+    background-image: linear-gradient( rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.4)), url(../images/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     justify-content: center;
     align-items: last baseline;
 }
+
 .hero {
     width: 90%;
     justify-content: center;
     align-items: center;
-    color: var(--white_color);
+    color: var(--light-slate);
     gap: 1rem;
     padding-bottom: 2rem;
+    font-weight: 600;
+}
+
+#main_profile img {
+    border-radius: 8px;
 }
 
 .cfa {
     padding: 0.5em 1.5em 0.5em 1.5em;
-    background-color: var(--link_color);
-    border-radius: 4px;
-    color: var(--white_color);
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    color: var(--green);
     font-size: var(--fs-h5);
     font-weight: 600;
+    background: linear-gradient( rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6));
 }
 
 .cfa:hover {
-    color: var(--link_highlight);
+    color: var(--green);
+    background-color: var(--navy);
+    border: 1px solid var(--green-tint);
 }
+
 /*Content wrapper*/
 .content-wrapper {
     width: 90%;
@@ -176,12 +209,19 @@ header a:hover, a:active {
     margin-right: auto;
     line-height: 1.5;
     padding: 1rem 0 1rem 0;
+    height: 50px;
 }
 
 /*About section*/
 #about {
     align-items: center;
-    gap:3rem;
+    gap: 3rem;
+    width: 90%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    padding: 1rem 0 1rem 0;
 }
 
 #about_me {
@@ -194,16 +234,16 @@ header a:hover, a:active {
 
 #contact {
     align-items: center;
-    gap:1.7rem;
+    gap: 1.7rem;
 }
 
 #contact ul {
-    gap:0;
+    gap: 0;
 }
 
 
 .card {
-    background-color: white;
+    background-color: var(--navy);
     align-items: center;
     border-radius: 4px;
 }
@@ -219,7 +259,7 @@ header a:hover, a:active {
     font-weight: 600;
 }
 
-.cards{
+.cards {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
@@ -231,16 +271,18 @@ header a:hover, a:active {
     visibility: visible;
 }
 
-#thuy_title, #thuy_info {
+#thuy_title,
+#thuy_info {
     visibility: collapse;
 }
-#thuy_card:hover #thuy_title{
+
+#thuy_card:hover #thuy_title {
     visibility: visible;
 }
 
 #thuy_card:hover #thuy_info {
     visibility: visible;
-    color: var(--black_color);
+    color: var(--slate);
     font-weight: 100;
 }
 
@@ -248,16 +290,18 @@ header a:hover, a:active {
     visibility: visible;
 }
 
-#daisy_title, #daisy_info {
+#daisy_title,
+#daisy_info {
     visibility: collapse;
 }
-#daisy_card:hover #daisy_title{
+
+#daisy_card:hover #daisy_title {
     visibility: visible;
 }
 
 #daisy_card:hover #daisy_info {
     visibility: visible;
-    color: var(--black_color);
+    color: var(--slate);
     font-weight: 100;
 }
 
@@ -265,16 +309,18 @@ header a:hover, a:active {
     visibility: visible;
 }
 
-#leif_title, #leif_info {
+#leif_title,
+#leif_info {
     visibility: collapse;
 }
-#leif_card:hover #leif_title{
+
+#leif_card:hover #leif_title {
     visibility: visible;
 }
 
 #leif_card:hover #leif_info {
     visibility: visible;
-    color: var(--black_color);
+    color: var(--slate);
     font-weight: 100;
 }
 
@@ -311,15 +357,16 @@ select {
 select {
     padding: 0.4em 0.2em;
 }
+
 label {
-  color: var(--black75);
+    color: var(--black75);
 }
 
 input[type="submit"] {
     background-color: var(--primary-color);
     color: var(--white-color);
     padding: 0.5em 0;
-    border-radius: 8px; 
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -340,11 +387,15 @@ form {
 /*Footer*/
 
 footer {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
+    position: sticky;
+    background-color: var(--dark-navy);
+    color: var(--slate);
     padding: 1rem;
     align-items: center;
     padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -361,16 +412,16 @@ footer ul i {
     background-color: var(--black50);
     color: var(--white-color);
     font-weight: 700;
-    position:fixed;
-    bottom: 0;
-    right:0;
+
+    right: 0;
 }
 
 
 
 /*Responsive Design*/
-@media screen and (max-width: 700px){
-/*Header for phones*/
+@media screen and (max-width: 700px) {
+
+    /*Header for phones*/
     header {
         flex-flow: column;
     }
@@ -378,24 +429,26 @@ footer ul i {
     header div {
         flex-flow: row;
         align-items: end;
-        position:relative;
-        left:-5px;
+        position: relative;
+        left: -5px;
     }
 
     #header_logo {
         position: relative;
         top: -2px;
     }
-    #logo_name, #logo_split {
+
+    #logo_name,
+    #logo_split {
         font-size: var(--fs-h3);
     }
-    
-/*About for phones*/
+
+    /*About for phones*/
     #about {
         align-items: center;
-        gap:3rem;
+        gap: 3rem;
     }
-    
+
     #about_me_container {
         flex-flow: column;
     }
@@ -405,7 +458,7 @@ footer ul i {
         padding: 0 1rem;
         text-align: center;
     }
-    
+
     #about_me h2 {
         align-self: center;
     }
@@ -414,24 +467,26 @@ footer ul i {
         visibility: collapse;
     }
 
-    #contact a{
+    #contact a {
         flex: initial auto auto;
         width: 20px;
         height: 20px;
         justify-content: center;
         align-items: center;
     }
-    
+
     #contact ul {
-       flex-flow: row;
-       gap:1rem;
+        flex-flow: row;
+        gap: 1rem;
     }
 
     .cards {
         gap: 1.5rem;
     }
 
-    #leif_info, #daisy_info, #thuy_info {
+    #leif_info,
+    #daisy_info,
+    #thuy_info {
         text-align: center;
     }
 }

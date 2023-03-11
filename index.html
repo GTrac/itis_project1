@@ -15,6 +15,9 @@
 </head>
 
 <body>
+
+
+    
     <header id="header" class="flex-row">
         <div id="logo" class="flex-row">
             <img id="header_logo" src="images/logo.png" alt="logo" height="40" width="40">
@@ -29,9 +32,18 @@
             </ul>
         </nav>
     </header>
+
+
+
+
+
     <main>
         <div class="hero-container flex-row">
             <section class="hero flex-column">
+                <div id="main_profile">
+                    <img src="images/ProfilePicture.jpg" height="200" width="200">
+                </div>
+
                 <h2>Gilbert Traczyk</h2>
                 <p>Software Engineer with a focus on front end development and embedded system design</p>
                 <a href="project.html">
@@ -39,7 +51,6 @@
                 </a>
             </section>
         </div>
-        <div class="flex-column content-wrapper">
             <section id="about" class="flex-column">
                 <div id="about_me_container" class="flex-row">
                     <div id="about_me" class="flex-column">
@@ -104,55 +115,17 @@
                     </a>
                 </div>
             </section>
-
-            <section id="projects" class="flex-column">
-                <h2>Book a Table</h2>
-                <form>
-                    <div>
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" required>
-                    </div>
-                
-                    <div>
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required>
-                    </div>
-                    <div>
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" required>
-                    </div>
-                    <div>
-                        <label for="schedule">Date/Time</label>
-                        <input type="datetime-local" id="schedule" required>
-                    </div>
-                    <div>
-                        <label for="size">Table size</label>
-                        <select id="size">
-                            <option value="2">2-person table</option>
-                            <option value="4">4-person table</option>
-                            <option value="6">6-person table</option>
-                            <option value="8">8-person table</option>
-                        </select>
-                    </div>
-                    <div class="span">
-                        <label for="request">Special Requests</label>
-                        <textarea id="request" cols="20" rows="5"></textarea>
-                    </div>
-                    <div class="span"><input type="submit" value="Reserve"></div>
-                </form>
-            </section>
-        </div>
     </main>
     <footer class="flex-column">
-
-        <p class="small">&copy;2022 Niner Coffee House</p>
-        <a href="#header" class="top">
-            <div><i class="fa-solid fa-arrow-up"></i></div>
-        </a>
+        <p class="small">&copy;2022 Gilbert Traczyk</p>
+        <ul class="flex-row">
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
     </footer>
 </body>
 
