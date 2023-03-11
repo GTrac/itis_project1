@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projectStyles.css">
     <title>Gilbert Traczyk</title>
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 </head>
@@ -25,141 +25,96 @@
             <ul class="flex-row">
                 <li><a href="index.html">About</a></li>
                 <li><a href="#project">Projects</a></li>
-                <li><a href="contact.html">Resume</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="hero-container flex-row">
             <section class="hero flex-column">
-                <h2>Gilbert Traczyk</h2>
-                <p>Software Engineer with a focus on front end development and embedded system design</p>
-                <a href="#projects">
-                    <div class="cfa">Check Out My Projects</div>
-                </a>
+                <h2>Projects</h2>
             </section>
         </div>
-        <div class="flex-column content-wrapper">
-            <section id="about" class="flex-column">
-                <div id="about_me_container" class="flex-row">
-                    <div id="about_me" class="flex-column">
-                        <h2>About Me</h2>
-                        <p>Gilbert Traczyk is a fresh graduate of computer engineering from UNCC. He loves programming,
-                            hiking, woodworking, rockclimbing, videogames, and breweries. He is currently a <a
-                                href="">software engineer</a> at <a href="">Siemens Mindsphere</a>. In his free time he
-                            is torn between relaxing with friends and working on any one of his innumerable <a
-                                href="#projects">active projects</a>. </p>
-                    </div>
-                    <div id="contact" class="flex-column">
-                        <h3>Contact</h3>
-                        <ul class="flex-column">
-                            <li><a href="#" class="flex-row"><i class="fa-brands fa-linkedin-in"></i>
-                                    <p>linkedIn</p>
-                                </a></li>
-                            <li><a href="#" class="flex-row"><i class="fa-brands fa-github"></i>
-                                    <p>Github</p>
-                                </a></li>
-                            <li><a href="#" class="flex-row"><i class="fa-solid fa-envelope"></i>
-                                    <p>Email</p>
-                                </a></li>
-                            <li><a href="#" class="flex-row"><i class="fa-brands fa-instagram"></i>
-                                    <p>Instagram</p>
-                                </a></li>
-                            <li><a href="#" class="flex-row"><i class="fa-brands fa-twitter"></i>
-                                    <p>Twitter</p>
-                                </a></li>
-                            <li><a href="#" class="flex-row"><i class="fa-brands fa-youtube"></i>
-                                    <p>Youtube</p>
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <h3>My Family</h3>
-                <div class="cards">
-                    <a id="thuy_card" class="card flex-column">
-                        <img src="images/thuyProfile.jpg" alt="profile" width="200" height="200">
-                        <p>Thuy-An</p>
-                        <h4 id="thuy_title">Thuy-An Traczyk</h4>
-                        <p id="thuy_info">Thuy-An has been married to Gilbert since 2020. She is currently a senior
-                            data
-                            analyst at Ally bank. She is a passionate potter and gardener and one of the greatest
-                            cooks the world has ever seen. </p>
-                    </a>
-
-                    <a id="daisy_card" class="card flex-column">
-                        <img src="images/daisyProfile.jpg" alt="profile" width="200" height="200">
-                        <p>Daisy</p>
-                        <h4 id="daisy_title">Daisy-Mae</h4>
-                        <p id="daisy_info">Daisy has been a happy go lucky member of the Traczky family since 2018.
-                            She is a fluffy golden-doodle who never seems to get bored of playing.</p>
-                    </a>
-
-                    <a id="leif_card" class="card flex-column">
-                        <img src="images/leifProfile.jpg" alt="profile" width="200" height="200">
-                        <p>Leif</p>
-                        <h4 id="leif_title">Leif Gilbertson</h4>
-                        <p id="leif_info">Leif is the most recent addition to the family after being adopted from a
-                            hoarding situation in XXXX. Leif is a chihuahua mix that wants nothing more but to be
-                            held in someones lap under a blanket. </p>
-                    </a>
-                </div>
-            </section>
-
-            <section id="projects" class="flex-column">
-                <h2>Book a Table</h2>
-                <form>
-                    <div>
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" required>
-                    </div>
-                
-                    <div>
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required>
-                    </div>
-                    <div>
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" required>
-                    </div>
-                    <div>
-                        <label for="schedule">Date/Time</label>
-                        <input type="datetime-local" id="schedule" required>
-                    </div>
-                    <div>
-                        <label for="size">Table size</label>
-                        <select id="size">
-                            <option value="2">2-person table</option>
-                            <option value="4">4-person table</option>
-                            <option value="6">6-person table</option>
-                            <option value="8">8-person table</option>
-                        </select>
-                    </div>
-                    <div class="span">
-                        <label for="request">Special Requests</label>
-                        <textarea id="request" cols="20" rows="5"></textarea>
-                    </div>
-                    <div class="span"><input type="submit" value="Reserve"></div>
-                </form>
-            </section>
+        <div class="content-wrapper" id="project_container">
+            <div class="project-card">
+                <img src="images/hydro.jpg">
+                <h4>Hydroponics system</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, C++, Python</p>
+            </div>
+            <div class="project-card">
+                <img src="images/mirror.webp">
+                <h4>Smart Mirror</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, Python, js, node</p>
+            </div>
+            <div class="project-card">
+                <img src="images/hearddit.webp">
+                <h4>Hearddit</h4>
+                <p class="desc">A website similair in design to reddit but with spotify styling and a focus on music featuring the spotify api</p>
+                <p class="tech">flask, Python, css, bootstrap</p>
+            </div>
+            <div class="project-card">
+                <img src="images/hydro.jpg">
+                <h4>Hydroponics system</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, C++, Python</p>
+            </div>
+            <div class="project-card">
+                <img src="images/hydro.jpg">
+                <h4>Hydroponics system</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, C++, Python</p>
+            </div>
+            <div class="project-card">
+                <img src="images/hydro.jpg">
+                <h4>Hydroponics system</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, C++, Python</p>
+            </div>
+            <div class="project-card">
+                <img src="images/hydro.jpg">
+                <h4>Hydroponics system</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, C++, Python</p>
+            </div>
+            <div class="project-card">
+                <img src="images/hydro.jpg">
+                <h4>Hydroponics system</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, C++, Python</p>
+            </div>
+            <div class="project-card">
+                <img src="images/hydro.jpg">
+                <h4>Hydroponics system</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, C++, Python</p>
+            </div>
+            <div class="project-card">
+                <img src="images/hydro.jpg">
+                <h4>Hydroponics system</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, C++, Python</p>
+            </div>
+            <div class="project-card">
+                <img src="images/hydro.jpg">
+                <h4>Hydroponics system</h4>
+                <p class="desc">A small raspberry pi controlled hydroponics system with automatic light and humidty control</p>
+                <p class="tech">Raspberry Pi, C++, Python</p>
+            </div>
         </div>
+
     </main>
     <footer class="flex-column">
-        <p class="small">&copy;2022 Gilbert Traczyk</p>
-        <ul class="flex-row">        
-            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        <p class="small">&copy;2023 Gilbert Traczyk</p>
+        <ul class="flex-row">
+            <li><a href="https://www.linkedin.com/in/gtraczyk/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/GTrac"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="mailto: gtraczyk@uncc.edu"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/home"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-brands fa-youtube"></i></a></li>
         </ul>
-        <a href="#header" class="top">
-            <div><i class="fa-solid fa-arrow-up"></i></div>
-        </a>
     </footer>
 </body>
 

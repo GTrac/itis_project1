@@ -110,6 +110,10 @@ body {
     padding:0;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 /*Header*/
 header {
@@ -162,7 +166,7 @@ main {
 /*Hero section*/
 .hero-container {
     height: auto;
-    min-height: 350px;
+    min-height: 380px;
     background-image: linear-gradient( rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.4)), url(../images/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -173,11 +177,11 @@ main {
 
 .hero {
     width: 90%;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     color: var(--light-slate);
-    gap: 1rem;
-    padding-bottom: 2rem;
+    gap: .5rem;
+    padding-bottom: 1rem;
     font-weight: 600;
 }
 
@@ -387,15 +391,16 @@ form {
 /*Footer*/
 
 footer {
-    position: sticky;
     background-color: var(--dark-navy);
-    color: var(--slate);
-    padding: 1rem;
+    color: var(--light-slate);
+    margin-top: auto;
     align-items: center;
-    padding: 1rem;
-    position: fixed;
+    position: absolute;
+    left: 0;
     bottom: 0;
     width: 100%;
+    overflow: hidden;
+    padding:1rem;
 }
 
 
@@ -419,7 +424,7 @@ footer ul i {
 
 
 /*Responsive Design*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
 
     /*Header for phones*/
     header {
@@ -481,7 +486,12 @@ footer ul i {
     }
 
     .cards {
-        gap: 1.5rem;
+        width: 100%;
+        min-height: 200;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 200px);
+        justify-content: center;
+        gap: 1rem;
     }
 
     #leif_info,

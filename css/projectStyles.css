@@ -35,8 +35,8 @@
     --green-tint: rgba(100, 255, 218, 0.1);
     --pink: #f57dff;
     --blue: #57cbff;
-  }
-  
+}
+
 /*Global Styles*/
 * {
     margin: 0;
@@ -61,11 +61,11 @@ h1 {
     font-size: var(--fs-h1);
     color: var(--light-slate);
 }
-  
+
 h2 {
     color: var(--light-slate);
     font-weight: 600;
-    font-size:var(--fs-h2);
+    font-size: var(--fs-h2);
 }
 
 h3 {
@@ -109,7 +109,7 @@ body {
     font-family: 'Raleway', sans-serif;
     color: var(--black_color);
     display: flex;
-    flex-flow:column;
+    flex-flow: column;
 }
 
 html {
@@ -140,7 +140,7 @@ header img {
 #logo_split {
     position: relative;
     top: -5px;
-    padding-right:6px;
+    padding-right: 6px;
 }
 
 #header_logo {
@@ -163,15 +163,17 @@ header a {
 
 /*Hero section*/
 .hero-container {
-    height: 10vh;
+    height: 8vh;
     min-height: 125px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));/*,url(../images/hero.jpg);*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /*,url(../images/hero.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     justify-content: center;
     align-items: last baseline;
 }
+
 .hero {
     width: 90%;
     justify-content: center;
@@ -193,6 +195,7 @@ header a {
 .cfa:hover {
     color: var(--link_highlight);
 }
+
 /*Content wrapper*/
 .content-wrapper {
     width: 90%;
@@ -201,49 +204,46 @@ header a {
     margin-right: auto;
     line-height: 1.5;
     padding: 1rem 0 1rem 0;
-}
-
-/*Contact Page*/
-input,
-textarea,
-select {
-    font: inherit;
-    font-size: var(--fs-h5);
-    color: var(--dark-navy);
-    background-color: var(--lightest-slate);
-    border: none;
-    width: 100%;
-    padding: 0.2em;
-}
-
-select {
-    padding: 0.4em 0.2em;
-}
-label {
-  color: var(--slate);
-}
-
-input[type="submit"] {
-    background-color: transparent;
-    color: var(--green);
-    border: 2px solid var(--green);
-    padding: 0.5em 0;
-    border-radius: 8px; 
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: var(--green-tint);
-}
-
-form {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 25%);
     gap: 1rem;
 }
 
-.span {
-    grid-column: 1/-1;
+/*Projects*/
+#project_container {
+
+}
+
+.project-card {
+    text-align: center;
+    height: fit-content;
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    border: 4px solid var(--dark-navy);
+    border-radius: 8px;
+    background-color: var(--dark-navy);
+}
+
+.project-card .desc {
+    visibility: visible;
+}
+
+.project-card .tech {
+    visibility: collapse;
+}
+
+.project-card:hover .tech {
+    visibility: visible;
+}
+
+.project-card:hover .desc {
+    visibility: collapse;
+}
+
+.project-card img {
+    border-radius: 8px;
+    height: 140px;
 }
 
 /*Footer*/
@@ -258,7 +258,7 @@ footer {
     bottom: 0;
     width: 100%;
     overflow: hidden;
-    padding:1rem;
+    padding: 1rem;
 }
 
 
@@ -271,11 +271,13 @@ footer ul i {
 }
 
 main {
-    min-height:750px;
+    min-height: 750px;
 }
+
 /*Responsive Design*/
-@media screen and (max-width: 700px){
-/*Header for phones*/
+@media screen and (max-width: 700px) {
+
+    /*Header for phones*/
     header {
         flex-flow: column;
     }
@@ -283,19 +285,21 @@ main {
     header div {
         flex-flow: row;
         align-items: end;
-        position:relative;
-        left:-5px;
+        position: relative;
+        left: -5px;
     }
 
     #header_logo {
         position: relative;
         top: -2px;
     }
-    #logo_name, #logo_split {
+
+    #logo_name,
+    #logo_split {
         font-size: var(--fs-h3);
     }
-    
-/*hero for phones*/
+
+    /*hero for phones*/
 
     .hero-container {
         height: min-content;
@@ -303,19 +307,19 @@ main {
     }
 
     .hero {
-       padding-bottom:.5rem;
+        padding-bottom: .5rem;
     }
 
     .hero ul p {
         visibility: collapse;
     }
 
-    .hero a{
+    .hero a {
         flex: initial auto auto;
         width: 20px;
         height: 20px;
         justify-content: center;
         align-items: center;
     }
-    
+
 }
